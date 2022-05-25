@@ -110,13 +110,23 @@ main {
   display: grid;
   grid-area: body;
   margin-top: 50px;
+  margin-bottom: 50px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "img1  img2  img3 img4 "
-    "img5  img6  img7 img8"
-    "img9  img10  img11 img12";
   grid-gap: 0.5em;
+}
+
+img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+/*when cursor hovers over image, make the image a bit lighter/opaque */
+.galleryblock img:hover {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 footer {
